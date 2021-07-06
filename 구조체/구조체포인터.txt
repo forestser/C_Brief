@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+typedef struct point {
+	int x;
+	int y;
+} pt;
+int main() {
+	pt*pt1 = (pt*)malloc(sizeof(pt));
+	pt*pt2 = (pt*)malloc(sizeof(pt));
+	
+	double dis;
+	
+	scanf("%d %d", &pt1->x, &pt1->y);
+	scanf("%d %d", &pt2->x, &pt2->y);
+	
+	printf("(%d, %d)\n",pt1->x, pt1->y);
+	printf("(%d, %d)\n",pt2->x, pt2->y);
+	
+	dis = sqrt(pow((pt1->x - pt2->x),2.0) + pow((pt1->y - pt2->y),2.0));
+	printf("%lf\n", dis);
+	
+	return 0;
+}
+
+두 좌표를 입력받은 후 두 좌표 사이의 거리르 출력한다.
+typedef로 별명을 설정, struct를 대신할 수 있음
+구조체로도 포인터 선언이 가능
+구조체 포인터의 멤버에 접근 ->(화살표 연산자)를 사용함.

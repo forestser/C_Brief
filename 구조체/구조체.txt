@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct student {
+	int no , inf , mat ; //학생정보, 정보점수, 수학점수
+	int sum; //합계 변수
+	double avg; //평균 변수
+};
+int main() {
+	int n;
+	struct student s[100];
+	scanf("%d", &n);
+	for(int i = 0; i < n; i++) {
+		scanf("%d %d %d", &s[i].no, &s[i].inf, &s[i].mat);
+	} 
+	for(int i = 0; i < n; i++) {
+		s[i].sum = s[i].inf + s[i].mat;
+		s[i].avg = s[i].sum / 2.0;
+	}
+	for(int i = 0; i < n; i++) {
+		printf("%04d %d %.1lf\n", s[i].no, s[i].sum , s[i].avg);
+	}
+}
+
+구조체를 사용해 n명의 정보를 입력받은 뒤 그들의 정보의 학번. 합산. 평균을 구함
+struct함수 뒤에 세미콜론(;)을 입력하는 것과 main 함수에서 배열을 선언하는 것을 보자.

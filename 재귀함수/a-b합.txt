@@ -1,0 +1,15 @@
+#include<stdio.h>
+void odd_print(int a,int b) {
+	
+	if(a > b) return;
+	if(a % 2 != 0) printf("%d ", a);
+	odd_print(a + 1, b);
+}
+int main(){
+	int n, a, b, i;
+	scanf("%d %d",&a, &b);
+	odd_print(a,b);
+	return 0;
+}
+
+a 와b 가 입력되면 a 와 b 사이의 모든 홀수를 출력.
