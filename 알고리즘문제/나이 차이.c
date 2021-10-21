@@ -1,4 +1,5 @@
 #include <stdio.h>
+//n명의 나이가 입력되는데, 이 n명의 사람 중 가장 나이 차이가 많이 나는 경우를 구하는 코드
 int main() {
 	int n, max = 1, min = 101;
 	int b[101];

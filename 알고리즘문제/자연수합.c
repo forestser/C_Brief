@@ -1,4 +1,5 @@
 #include <stdio.h>
+//자연수 n, m(n < m) 이 입력된다면 n부터 m까지의 합을 출력함
 int main() {
 	int n, m;
 	scanf("%d %d", &n, &m);

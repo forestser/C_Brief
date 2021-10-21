@@ -1,4 +1,5 @@
 #include <stdio.h>
+//자연수 n이 주어지면 자연수 n의 진약수(자기 자신의 제외한 약수)의 합을 구하는 코드
 int main() {
     int n, m;
     scanf("%d",&n);

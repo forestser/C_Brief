@@ -1,4 +1,5 @@
 #include <stdio.h>
+//(올해는 2019년). 민증의 번호가 주어지면 나이, 성별을 판단하는 코드
 int main() {
 	int f, b, c;
 	char s[5];
