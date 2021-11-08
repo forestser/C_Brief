@@ -55,6 +55,7 @@ int isFull( QUEUE *q ){
 	}else{
 		return 0;
 	}
+    //rear값의 size로 나눈 값과, front값을 size로 나눈 값이 맞다면 그것을 초과 상태로 봄
 }
 void enQueue( QUEUE *q, ELEMENT data ){
 	if( isFull( q ) ) printf("Queue is full\n");
@@ -63,6 +64,8 @@ void enQueue( QUEUE *q, ELEMENT data ){
 		q->rear++;
 		q->rear = q->rear % q->size;
 		q->buf[ q->rear ] = data;
+        //rear값은 계속 오르지만, 그 값을 size로 나눠버림
+        //결과론적으로는 rear값은 계속 0 ~ 5사이에 남게 됨
 	}
 }
 int isEmpty( QUEUE *q ){
@@ -72,6 +75,7 @@ int isEmpty( QUEUE *q ){
 	}else{
 		return 0;
 	}
+    //이 부분은 goorm에도 있지만, 공백 조건과 초과 조건이 다름
 }
 ELEMENT deQueue( QUEUE *q ){
 	if( isEmpty( q ) ){
